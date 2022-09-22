@@ -6,7 +6,11 @@ const topcodes = [{
   unit: 8,
   orientation: 0.0,
   x: 0.0,
-  y: 0.0}
-];
+  y: 0.0
+}];
 
-alert(parse(topcodes));
+const json = JSON.parse(parse(topcodes));
+
+const node = document.createElement("pre");
+node.textContent = JSON.stringify(json, null, 4);
+document.body.appendChild(node);

@@ -21,11 +21,11 @@ extern "C" {}
 /// not need to be aware of this field, even internally.
 #[derive(Serialize, Deserialize)]
 pub struct JsonTopCode {
-    code: u32,
-    unit: f64,
-    orientation: f64,
-    x: f64,
-    y: f64,
+    pub code: u32,
+    pub unit: f64,
+    pub orientation: f64,
+    pub x: f64,
+    pub y: f64,
 }
 
 impl From<&JsonTopCode> for TopCode {
