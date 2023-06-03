@@ -1,8 +1,9 @@
 [package]
 name = "tangibl-wasm"
-version = "0.0.1"
+description = "WASM target for the tangibl library"
+version = "0.1.0"
 authors = ["Byron Batteson <byronbatteson@gmail.com>"]
-edition = "2018"
+edition = "2021"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
@@ -14,8 +15,8 @@ default = ["console_error_panic_hook"]
 js-sys = "0.3.60"
 serde = { version = "1.0.144", features = ["derive"] }
 serde-wasm-bindgen = "0.4.3"
-tangibl = { version = "*", path = "../tangibl-rs" } # TODO: Use cargo or git.
-topcodes = { version = "*", git = "https://github.com/tangibl/topcodes-rs.git" } # TODO: Use cargo
+tangibl = "0.1.0"
+topcodes = "0.1.0"
 wasm-bindgen = "0.2.63"
 
 # The `console_error_panic_hook` crate provides better debugging of panics by
