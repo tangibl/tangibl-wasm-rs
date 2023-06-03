@@ -3,7 +3,9 @@ name = "tangibl-wasm"
 description = "WASM target for the tangibl library"
 version = "0.1.0"
 authors = ["Byron Batteson <byronbatteson@gmail.com>"]
+license = "GPL-2.0"
 edition = "2021"
+repository = "https://github.com/tangibl/tangibl-wasm-rs"
 
 [lib]
 crate-type = ["cdylib", "rlib"]
