@@ -9,8 +9,8 @@ const topcodes = [{
   y: 0.0
 }];
 
-const json = JSON.parse(parse(topcodes));
+const json = parse(topcodes);
 
 const node = document.createElement("pre");
-node.textContent = JSON.stringify(json, null, 4);
+node.textContent = JSON.stringify(json, undefined, 4);
 document.body.appendChild(node);
