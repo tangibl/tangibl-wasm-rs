@@ -3,7 +3,7 @@
 #![cfg(target_arch = "wasm32")]
 
 extern crate wasm_bindgen_test;
-use js_sys::JSON;
+use js_sys::{JsString, JSON};
 use tangibl_wasm::{parse, JsonTopCode};
 use wasm_bindgen::JsValue;
 use wasm_bindgen_test::*;
@@ -22,6 +22,9 @@ fn parses_a_start_token() -> Result<(), JsValue> {
     .unwrap();
     eprintln!("{:?}", topcodes);
     let result = parse(topcodes);
-    assert_eq!(JSON::parse("{\"name\":\"start\"}")?, result);
+    assert_eq!(
+        JsString::from("{\"name\":\"start\"}"),
+        JSON::stringify(&result)?
+    );
     Ok(())
 }
