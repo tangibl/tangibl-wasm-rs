@@ -3,6 +3,7 @@ import wasm from "vite-plugin-wasm";
 import topLevelAwait from "vite-plugin-top-level-await";
 
 const config: UserConfigExport = {
+  base: "/tangibl-wasm-rs/",
   plugins: [
     wasm(),
     topLevelAwait(),
