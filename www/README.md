@@ -7,7 +7,5 @@ To get started, run:
 
 ```sh
 npm install
-npm run start
+npm run dev
 ```
-
-The Webpack server will run on http://localhost:8000.
